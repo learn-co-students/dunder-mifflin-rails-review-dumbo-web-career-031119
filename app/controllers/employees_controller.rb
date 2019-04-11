@@ -20,11 +20,14 @@ class EmployeesController < ApplicationController
   end
 
   def edit
-
+    find_by_id
+    @attributes = attributes_hash
+    @dogs = Dog.all
   end
 
   def update
-
+    find_by_id.update(params.require(:employee).permit(:first_name, :last_name, :alias, :title, :office, :img_url, :dog_id))
+    redirect_to find_by_id
   end
 
   private
