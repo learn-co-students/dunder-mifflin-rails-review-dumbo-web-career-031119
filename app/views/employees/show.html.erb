@@ -1,0 +1,9 @@
+Show employee:
+
+<h1>Name: <%= @employee.first_name %> <%= @employee.last_name %></h1>
+<p>Age: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<img src="<%= @employee.img_url %>" alt="">
+
+<p>Dog: <%= link_to @dog.name, @dog %></p>
