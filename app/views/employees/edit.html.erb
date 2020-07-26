@@ -1,0 +1,41 @@
+<h1>Edit <%= @employee.first_name %>:</h1>
+
+
+<%= form_for @employee do |f| %>
+
+<p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+</p>
+
+
+
+<p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+</p>
+
+<p>
+    test
+    <%= f.label :alias %>
+    <%= f.text_field :alias %>
+</p>
+
+<p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :office %>
+    <%= f.text_field :office %>
+</p>
+
+<p>Dog: <%= link_to @dog.name, @dog %></p>
+
+
+<%= f.collection_select(:dog, @dogs, :id, :name) %>
+
+<%= f.submit %>
+
+<% end %>
